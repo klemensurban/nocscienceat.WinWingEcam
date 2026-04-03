@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- NuGet package metadata -->
+    <PackageId>nocscienceat.WinWingEcam</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>klemensurban</Authors>
+    <Description>WinWing ECAM panel driver for the nocscienceat.XPlanePanel, nocscienceat.XPlaneWebConnector framework.</Description>
+    <PackageTags>xplane;ecam;winwing;simulator;flight;hardware;hid;airbus</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/klemensurban/nocscienceat.WinWingEcam</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/klemensurban/nocscienceat.WinWingEcam</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <!-- Package generation -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>CS1591</NoWarn>
+
+    <!-- Deterministic & reproducible builds -->
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+    <None Include="LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HidSharp" Version="2.6.4" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="All" />
+    <ProjectReference Include="..\nocscienceat.XPlanePanel\nocscienceat.XPlanePanel.csproj" />
+    <ProjectReference Include="..\nocscienceat.XPlaneWebConnector\nocscienceat.XPlaneWebConnector.csproj" />
+  </ItemGroup>
+
+</Project>
