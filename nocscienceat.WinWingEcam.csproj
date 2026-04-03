@@ -39,8 +39,7 @@
   <ItemGroup>
     <PackageReference Include="HidSharp" Version="2.6.4" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="All" />
-    <ProjectReference Include="..\nocscienceat.XPlanePanel\nocscienceat.XPlanePanel.csproj" />
-    <ProjectReference Include="..\nocscienceat.XPlaneWebConnector\nocscienceat.XPlaneWebConnector.csproj" />
+    <PackageReference Include="nocscienceat.XPlanePanel" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
